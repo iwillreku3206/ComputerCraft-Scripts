@@ -15,7 +15,13 @@ end
 
 while true do
     local event,button,x,y = os.pullEvent("mouse_click")
-    updateScreen()
+    
+    local ox = x
+    local oy = y
+
+    if ox !=x or oy !=y then
+        updateScreen()
+    end
 
 
 end
