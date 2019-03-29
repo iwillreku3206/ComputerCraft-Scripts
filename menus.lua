@@ -9,7 +9,7 @@ while true do
     local event,button,x,y = os.pullEvent("mouse_click")
 
     term.setBackgroundColor(colors.black)
-    term.setTextColor(colors.write)
+    term.setTextColor(colors.white)
     term.setCursorPos(1,1)
     term.write("Toggle Menu")
 end
