@@ -19,7 +19,7 @@ while true do
     local ox = x
     local oy = y
 
-    if ox !=x or oy !=y then
+    if not ox==x or not oy ==y then
         updateScreen()
     end
 
