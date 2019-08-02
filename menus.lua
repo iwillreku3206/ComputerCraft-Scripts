@@ -1,10 +1,17 @@
 
-term.setBackgroundColor(colors.black)
-term.clear()
-
-function updateScreen ()
+function initialize ()
     term.clear()
     term.setTextColor(colors.white)
+    term.setBackgroundColor(colors.black)
+end
+
+local buttons = []
+
+function newButton (id, sX, sY, eX, eY, text, type)
+    
+end
+
+function updateScreen ()
     term.setCursorPos(2, 2)
     term.write("Toggle Menu")
     term.setCursorPos (2, 5)
@@ -13,16 +20,18 @@ function updateScreen ()
     term.write(y)
 end
 
+
+
 while true do
     local event,button,x,y = os.pullEvent("mouse_click")
     
-    updateScreen()
+    if not event == nil then
+        updateScreen()
+    end
 
     if not ox==x or not oy ==y then
         updateScreen()
         local ox = x
         local oy = y
     end
-
-
 end
