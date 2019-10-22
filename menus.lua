@@ -1,3 +1,5 @@
+hasTitle = true
+title = "Title"
 
 function initialize ()
     term.clear()
@@ -13,7 +15,9 @@ end
 
 function updateScreen ()
     term.setCursorPos(2, 2)
-    term.write("Toggle Menu")
+    if (hasTitle == false) then
+        
+    end    
     term.setCursorPos (2, 5)
     term.write(x)
     term.setCursorPos (2, 6)
