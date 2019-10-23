@@ -1,16 +1,28 @@
 hasTitle = true
 title = "Title"
 
+bgColor = colors.black
+fgColor = colors.white
+
+function setForegroundColor(color)
+    fgColor = color
+end
+
+function setBackgroundColor(color)
+    bgColor = color
+end
+
 function initialize ()
     term.clear()
-    term.setTextColor(colors.white)
-    term.setBackgroundColor(colors.black)
+    term.setTextColor(fgColor)
+    term.setBackgroundColor(bgColor)
 end
 
 local buttons = []
 
 function newButton (id, sX, sY, eX, eY, text, type)
-    
+    buttons[id][sX] = sX
+    buttons[id][sY]
 end
 
 function updateScreen ()
